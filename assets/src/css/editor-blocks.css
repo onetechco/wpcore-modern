@@ -1,0 +1,83 @@
+/**
+ * Block Editor Block Styles
+ * Custom styles for block editor blocks
+ *
+ * @package WPCore
+ */
+
+@layer components {
+  /**
+   * Button Block Styles
+   */
+  .wp-block-button.is-style-outline .wp-block-button__link {
+    background-color: transparent;
+    border: 2px solid var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--primary);
+  }
+
+  .wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--primary);
+    color: white;
+  }
+
+  .wp-block-button.is-style-ghost .wp-block-button__link {
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: var(--wp--preset--color--primary);
+  }
+
+  .wp-block-button.is-style-ghost .wp-block-button__link:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+
+  /**
+   * Quote Block Styles
+   */
+  .wp-block-quote.is-style-modern {
+    border-left: 4px solid var(--wp--preset--color--primary);
+    padding-left: 1.5rem;
+    font-style: italic;
+    margin: 1.5rem 0;
+  }
+
+  /**
+   * Image Block Styles
+   */
+  .wp-block-image.is-style-rounded-lg img {
+    border-radius: 0.5rem;
+  }
+
+  .wp-block-image.is-style-shadow-lg img {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /**
+   * Group Block Styles
+   */
+  .wp-block-group.is-style-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .wp-block-group.is-style-section {
+    padding: 5rem 0;
+  }
+
+  /**
+   * Columns Block Styles
+   */
+  .wp-block-columns.is-style-features {
+    gap: 2rem;
+  }
+
+  .wp-block-columns.is-style-features .wp-block-column {
+    padding: 2rem;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+

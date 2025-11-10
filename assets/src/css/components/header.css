@@ -1,0 +1,74 @@
+/**
+ * Header Component Styles
+ * Transparent header and header variations
+ *
+ * @package WPCore
+ */
+
+@layer components {
+  /**
+   * Transparent Header
+   */
+  .transparent-header .site-header {
+    background: transparent;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+
+  .transparent-header .site-header .main-navigation .menu-item a {
+    color: white;
+  }
+
+  .transparent-header .site-header .mobile-menu-toggle {
+    color: white;
+  }
+
+  .transparent-header .site-header .site-branding a {
+    color: white;
+  }
+
+  /**
+   * Header on scroll (for transparent header)
+   */
+  .transparent-header .site-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .transparent-header .site-header.scrolled .main-navigation .menu-item a {
+    color: #374151;
+  }
+
+  .transparent-header .site-header.scrolled .mobile-menu-toggle {
+    color: #374151;
+  }
+
+  .transparent-header .site-header.scrolled .site-branding a {
+    color: #111827;
+  }
+
+  /**
+   * Transparent header - ensure text is visible
+   */
+  body.transparent-header .site-header {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  body.transparent-header .site-header .main-navigation .menu-item a {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  body.transparent-header .site-header .mobile-menu-toggle {
+    color: white;
+  }
+
+  body.transparent-header .site-header .site-branding a {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+}
+

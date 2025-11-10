@@ -1,0 +1,92 @@
+/**
+ * Custom base styles and resets
+ *
+ * @package WPCore
+ */
+
+@layer base {
+  /**
+   * Smooth scrolling
+   */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /**
+   * Better box-sizing
+   */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /**
+   * Remove default margins
+   */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /**
+   * Body defaults
+   */
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /**
+   * Make images easier to work with
+   */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /**
+   * Inherit fonts for inputs and buttons
+   */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /**
+   * Remove default list styles on ul, ol with a class
+   */
+  ul[class],
+  ol[class] {
+    list-style: none;
+    padding: 0;
+  }
+
+  /**
+   * Focus styles
+   */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}

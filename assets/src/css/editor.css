@@ -1,0 +1,62 @@
+/**
+ * Block Editor styles
+ * This generates the editor.css for WordPress block editor
+ *
+ * @package WPCore
+ */
+
+/**
+ * Import Tailwind base theme
+ */
+@import "tailwindcss/theme" layer(theme);
+
+/**
+ * Import custom theme variables
+ */
+@import "./theme.css" layer(theme);
+
+/**
+ * Import custom fonts
+ */
+@import "./base/typography.css";
+
+/**
+ * Tailwind utilities & base
+ */
+@import "tailwindcss" layer(base, components, utilities);
+
+/**
+ * Custom components for editor
+ */
+@import "./components/buttons.css";
+@import "./components/cards.css";
+@import "./components/forms.css";
+
+/**
+ * Block editor block styles
+ */
+@import "./editor-blocks.css";
+
+/**
+ * Editor specific styles
+ */
+.editor-styles-wrapper {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #111827;
+}
+
+.editor-styles-wrapper .block-editor-block-list__block {
+  max-width: var(--container-content);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editor-styles-wrapper .block-editor-block-list__block[data-align="wide"] {
+  max-width: var(--container-wide);
+}
+
+.editor-styles-wrapper .block-editor-block-list__block[data-align="full"] {
+  max-width: none;
+}

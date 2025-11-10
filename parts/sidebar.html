@@ -1,0 +1,17 @@
+<!-- wp:group {"tagName":"aside","style":{"spacing":{"padding":{"top":"1rem","bottom":"1rem","left":"1rem","right":"1rem"}}},"layout":{"type":"default"}} -->
+<aside id="secondary" class="wp-block-group widget-area" style="padding-top:1rem;padding-right:1rem;padding-bottom:1rem;padding-left:1rem">
+	<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"1rem"}}},"typography":{"fontSize":"1.25rem","fontWeight":"700"}} -->
+	<h3 class="wp-block-heading" style="font-size:1.25rem;font-weight:700;margin-bottom:1rem">Sidebar</h3>
+	<!-- /wp:heading -->
+
+	<!-- wp:html -->
+	<div class="wp-block-html">
+		<!-- Widgets will be displayed here via PHP -->
+		<?php if (is_active_sidebar('sidebar-1')) : ?>
+			<?php dynamic_sidebar('sidebar-1'); ?>
+		<?php endif; ?>
+	</div>
+	<!-- /wp:html -->
+</aside>
+<!-- /wp:group -->
+

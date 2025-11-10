@@ -1,0 +1,74 @@
+/**
+ * Main stylesheet entry point
+ * This generates the front-end style.css
+ *
+ * @package WPCore
+ */
+
+/**
+ * WordPress file header
+ * This will be included in the compiled CSS
+ */
+/*
+Theme Name: WPCore Modern
+Theme URI: https://phongnguyen.net
+Author: Phong Nguyen
+Author URI: https://phongnguyen.net
+Description: A modern, lightweight WordPress starter theme built with Tailwind CSS 4. Designed for speed, simplicity, and scalability.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wpcore-modern
+Tags: blog, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, full-width-template, theme-options, translation-ready, block-styles, wide-blocks
+*/
+
+/**
+ * Import Tailwind base theme
+ */
+@import "tailwindcss/theme" layer(theme);
+
+/**
+ * Import custom theme variables (Tailwind 4 @theme)
+ */
+@import "./theme.css" layer(theme);
+
+/**
+ * Import custom fonts
+ */
+@import "./base/typography.css";
+
+/**
+ * Tailwind utilities & base
+ */
+@import "tailwindcss" layer(base, components, utilities);
+
+/**
+ * Custom base styles
+ */
+@import "./base/reset.css";
+@import "./base/layout.css";
+
+/**
+ * Custom components
+ */
+@import "./components/buttons.css";
+@import "./components/cards.css";
+@import "./components/forms.css";
+@import "./components/navigation.css";
+@import "./components/hero.css";
+@import "./components/sections.css";
+@import "./components/header.css";
+@import "./components/footer.css";
+
+/**
+ * Custom utilities
+ */
+@import "./base/utilities.css";
+
+/**
+ * WordPress specific styles
+ */
+@import "./base/wordpress.css";

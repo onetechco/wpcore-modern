@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<ruleset name="WPCore Modern">
+	<description>WordPress Coding Standards for WPCore Modern Theme</description>
+
+	<!-- What to scan -->
+	<file>.</file>
+
+	<!-- Exclude directories -->
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/assets/dist/*</exclude-pattern>
+	<exclude-pattern>*/.git/*</exclude-pattern>
+	<exclude-pattern>*/languages/*</exclude-pattern>
+
+	<!-- How to scan -->
+	<arg value="extensions"/>
+	<arg name="extensions" value="php"/>
+
+	<!-- Rules: Check PHP version compatibility -->
+	<config name="testVersion" value="8.0-"/>
+
+	<!-- Rules: Set the minimum supported WordPress version -->
+	<config name="minimum_supported_wp_version" value="6.0"/>
+
+	<!-- Rules: Use WordPress Coding Standards -->
+	<rule ref="WordPress">
+		<!-- Allow short array syntax -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+		
+		<!-- Allow short ternary operator -->
+		<exclude name="WordPress.PHP.DisallowShortTernary"/>
+		
+		<!-- Allow Yoda conditions (optional) -->
+		<!-- <exclude name="WordPress.PHP.YodaConditions"/> -->
+	</rule>
+
+	<!-- Rules: WordPress Core -->
+	<rule ref="WordPress-Core">
+		<!-- Allow short array syntax -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+
+	<!-- Rules: WordPress Extra -->
+	<rule ref="WordPress-Extra">
+		<!-- Allow short array syntax -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+
+	<!-- Rules: WordPress VIP -->
+	<rule ref="WordPress-VIP">
+		<!-- Allow short array syntax -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+
+	<!-- Rules: PHP Compatibility -->
+	<rule ref="PHPCompatibilityWP"/>
+
+	<!-- Rules: Custom -->
+	<rule ref="Generic.Commenting.DocComment">
+		<severity>5</severity>
+	</rule>
+
+	<!-- Rules: Exclude specific sniffs -->
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/assets/dist/*</exclude-pattern>
+</ruleset>
+

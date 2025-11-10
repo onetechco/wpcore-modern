@@ -1,0 +1,28 @@
+/**
+ * Typography and font loading
+ *
+ * @package WPCore
+ */
+
+/**
+ * Google Fonts
+ * Using Inter for sans-serif and Merriweather for serif
+ * font-display: swap ensures text remains visible during font load
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700&display=swap');
+
+/**
+ * Custom font-face rules
+ * Add your custom fonts here if needed
+ */
+
+/* Example:
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../fonts/CustomFont.woff2') format('woff2'),
+       url('../fonts/CustomFont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/

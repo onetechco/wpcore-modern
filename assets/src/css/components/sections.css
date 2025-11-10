@@ -1,0 +1,171 @@
+/**
+ * Section Components
+ * Professional section styles for landing pages
+ *
+ * @package WPCore
+ */
+
+@layer components {
+  /**
+   * Base Section Styles
+   */
+  section {
+    margin: 0;
+  }
+
+  /**
+   * Features Section
+   */
+  .features-section {
+    padding: 5rem 0;
+    background: white;
+  }
+
+  .features-section h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .features-section > div > div > p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 3rem;
+  }
+
+  /**
+   * Feature Card
+   */
+  .feature-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    height: 100%;
+  }
+
+  .feature-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.2);
+  }
+
+  /**
+   * Services Section
+   */
+  .services-section {
+    background: #f9fafb;
+    padding: 5rem 0;
+  }
+
+  .services-section h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .services-section > div > div > p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 3rem;
+  }
+
+  /**
+   * CTA Section
+   */
+  .cta-section {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .cta-section > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .cta-section p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  /**
+   * CTA Section buttons
+   */
+  .cta-section .btn-outline {
+    color: white;
+    border-color: white;
+  }
+
+  .cta-section .btn-outline:hover:not(:disabled) {
+    background-color: white;
+    color: var(--color-primary);
+  }
+
+  .cta-section .btn-ghost.text-white {
+    color: white;
+    border-color: transparent;
+  }
+
+  .cta-section .btn-ghost.text-white:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+  /**
+   * Latest Posts Section
+   */
+  .latest-posts {
+    padding: 4rem 0;
+  }
+
+  /**
+   * Responsive Design
+   */
+  @media (max-width: 767px) {
+    .features-section,
+    .services-section,
+    .cta-section {
+      padding: 3rem 0;
+    }
+
+    .features-section h2,
+    .services-section h2,
+    .cta-section h2 {
+      font-size: 2rem;
+    }
+  }
+}
+

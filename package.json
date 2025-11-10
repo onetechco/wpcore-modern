@@ -1,0 +1,51 @@
+{
+  "name": "wpcore-modern",
+  "version": "1.0.0",
+  "description": "A modern, lightweight WordPress starter theme built with Tailwind CSS 4. Designed for speed, simplicity, and scalability.",
+  "author": "Phong Nguyen <https://phongnguyen.net>",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://phongnguyen.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phongnguyen/wpcore-modern.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phongnguyen/wpcore-modern/issues"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "tailwind",
+    "starter",
+    "modern",
+    "block-editor",
+    "gutenberg",
+    "responsive",
+    "accessibility"
+  ],
+  "scripts": {
+    "dev:css": "postcss assets/src/css/main.css -o assets/dist/css/style.css --watch --verbose",
+    "dev:css:editor": "cross-env TARGET=editor postcss assets/src/css/editor.css -o assets/dist/css/editor.css --watch",
+    "dev:js": "esbuild assets/src/js/main.js assets/src/js/block-editor.js --bundle --sourcemap --outdir=assets/dist/js --watch",
+    "dev": "npm-run-all --parallel dev:*",
+    "build:css": "cross-env NODE_ENV=production postcss assets/src/css/main.css -o assets/dist/css/style.css",
+    "build:css:editor": "cross-env NODE_ENV=production TARGET=editor postcss assets/src/css/editor.css -o assets/dist/css/editor.css",
+    "build:js": "esbuild assets/src/js/main.js assets/src/js/block-editor.js --bundle --minify --sourcemap --outdir=assets/dist/js --out-extension:.js=.min.js",
+    "build": "npm-run-all build:*",
+    "watch": "npm run dev",
+    "production": "npm run build"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.14",
+    "autoprefixer": "^10.4.19",
+    "cross-env": "^10.1.0",
+    "cssnano": "^7.1.1",
+    "esbuild": "^0.25.11",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^13.0.2",
+    "tailwindcss": "^4.1.14"
+  }
+}

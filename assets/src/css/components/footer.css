@@ -1,0 +1,98 @@
+/**
+ * Footer Component Styles
+ * Footer variations and styles
+ *
+ * @package WPCore
+ */
+
+@layer components {
+  /**
+   * Base Footer
+   */
+  .site-footer {
+    background: #1f2937;
+    color: #d1d5db;
+    margin-top: auto;
+  }
+
+  /**
+   * Footer Widgets
+   */
+  .footer-widgets {
+    padding: 3rem 0;
+  }
+
+  .footer-column {
+    color: #d1d5db;
+  }
+
+  .footer-column a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-column a:hover {
+    color: white;
+  }
+
+  .footer-column .widget-title {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  /**
+   * Footer Bottom
+   */
+  .footer-bottom {
+    border-top: 1px solid #374151;
+    padding: 1.5rem 0;
+  }
+
+  .footer-bottom .copyright {
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+
+  /**
+   * Footer Navigation
+   */
+  .footer-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-navigation a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer-navigation a:hover {
+    color: white;
+  }
+
+  /**
+   * Minimal Footer
+   */
+  .site-footer.minimal-footer {
+    padding: 1.5rem 0;
+  }
+
+  /**
+   * Full Footer (4 columns)
+   */
+  @media (min-width: 1024px) {
+    .footer-widgets .grid.lg\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}
+
